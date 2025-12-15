@@ -33,7 +33,7 @@ khmer-ocr-dataset/
 
 ### 📊 Statistics
 *   **Content Source:** High school academic materials (Lessons, Homework, Exams).
-*   **Total Samples:** 154 pages or 3.3k Snippets
+*   **Total Samples:** 154 pages or 3.9k Snippets
 *   **Vocabulary:** Khmer Unicode (Abugida script)
 *   **Encoding:** UTF-8
 
