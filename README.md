@@ -1,55 +1,54 @@
-# 🇰🇭 Khmer Handwritten OCR Dataset
+# Khmer Handwritten OCR Dataset
 
 ![Task: OCR](https://img.shields.io/badge/Task-OCR-blue) ![Language: Khmer](https://img.shields.io/badge/Language-Khmer-red) ![Format: JPEG](https://img.shields.io/badge/Format-JPEG-green) ![Origin: CADT_Capstone](https://img.shields.io/badge/Origin-CADT_Capstone-orange)
 
 A curated collection of Khmer handwritten data sourced from **high school lessons, homework, and exams**. This dataset was compiled and processed by students from the **Cambodia Academy of Digital Technology (CADT)** for a capstone project. It is specifically designed for training Khmer handwritten OCR systems, such as **TrOCR**.
 
-## 👥 Team & Credits
+## Team & Credits
 
 This dataset is the result of a collaborative effort by the following members:
 
-*   **Ly Leab** — *Main Contributor*
-*   **Lay Sopanha** — *Compiler & Normalizer*
-    *   Responsible for the data engineering pipeline: consolidated disparate raw formats, cleaned messy annotations, and normalized the data into this unified structure using custom scripts.
-*   **Narith Sopheakleap** — *Contributor*
-*   **Hinge Sothida** — *Contributor*
-*   **Sok Sothika** — *Contributor*
+- **Ly Leab** — Main contributor
+- **Lay Sopanha** — Compiler and normalizer; built the data engineering pipeline to consolidate formats, clean annotations, and normalize into a unified structure.
+- **Narith Sopheakleap** — Contributor
+- **Hinge Sothida** — Contributor
+- **Sok Sothika** — Contributor
 
 ---
 
-## 📂 Dataset Structure
+## Dataset Structure
 
 The repository is organized as follows:
 
 ```text
 khmer-ocr-dataset/
-├── 📁 crops/             # Directory containing all image files (.jpg)
+├── crops/                # Directory containing all image files (.jpg)
 │   ├── crop_001.jpg
 │   ├── crop_002.jpg
 │   └── ...
-├── 📝 labels.csv         # The ground truth mapping (file_name, text)
-└── 📄 README.md          # This documentation
+├── labels.csv            # Ground truth mapping (file_name, text)
+└── README.md             # This documentation
 ```
 
-### 📊 Statistics
-*   **Content Source:** High school academic materials (Lessons, Homework, Exams).
-*   **Total Samples:** 154 pages or 3.9k Snippets
-*   **Vocabulary:** Khmer Unicode (Abugida script)
-*   **Encoding:** UTF-8
+### Statistics
+- **Content source:** High school academic materials (lessons, homework, exams)
+- **Total samples:** 154 pages or ~3.9k snippets
+- **Vocabulary:** Khmer Unicode (abugida script)
+- **Encoding:** UTF-8
 
 ---
 
 ## Data Format
 
 ### Images
-*   **Format:** RGB JPEG (`.jpg`)
-*   **Background:** Masked to white (`#FFFFFF`) to reduce noise.
-*   **Content:** Handwritten Khmer script (lines or individual words).
+- **Format:** RGB JPEG (`.jpg`)
+- **Background:** Masked to white (`#FFFFFF`) to reduce noise.
+- **Content:** Handwritten Khmer script (lines or individual words).
 
 ### Labels (`labels.csv`)
 A CSV file containing the mapping between images and text.
-*   **Header:** `file_name,text`
-*   **Encoding:** UTF-8
+- **Header:** `file_name,text`
+- **Encoding:** UTF-8
 
 **Example:**
 
@@ -69,8 +68,8 @@ A CSV file containing the mapping between images and text.
 Clone the repository. If the dataset contains many images, ensure you have Git LFS installed if applicable.
 
 ```bash
-git clone <your-repo-url-here>
-cd <repo-name>
+git clone https://github.com/LaySopanha/Khmer-Handwritten-Dataset.git
+cd Khmer-Handwritten-Dataset
 ```
 
 ### 2. Python Quick Start
@@ -138,7 +137,7 @@ class KhmerOCRDataset(Dataset):
 
 ---
 
-## ⚠️ Preprocessing Notes
+## Preprocessing Notes
 
 Khmer is a complex script (Abugida). When using this data for training:
 
@@ -147,7 +146,7 @@ Khmer is a complex script (Abugida). When using this data for training:
 
 ---
 
-## 🤝 Integration
+## Integration
 
 If you are using this with the main TrOCR training repository:
 1.  Set `DATA_ROOT` to point to the `crops/` folder.
@@ -155,13 +154,13 @@ If you are using this with the main TrOCR training repository:
 
 ---
 
-## 📜 License
+## License
 
 This dataset is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
 
 ---
 
-## ✍️ Citation
+## Citation
 
 If you use this dataset in your research, please cite:
 
